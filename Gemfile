@@ -39,3 +39,13 @@ gem 'jquery-rails'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 gem 'spree_usa_epay'
 gem 'spree_skrill'
+
+group :production do
+  gem 'unicorn'
+  gem 'foreman'
+  gem 'therubyracer' #only required for 0.70.x or later
+end
+ 
+group :development do
+  gem 'capistrano'
+end
